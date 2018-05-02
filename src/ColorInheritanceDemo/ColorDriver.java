@@ -1,3 +1,5 @@
+package ColorInheritanceDemo;
+
 public class ColorDriver {
 
 	public static void main(String[] args) {

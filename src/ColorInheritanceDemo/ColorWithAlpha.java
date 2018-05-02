@@ -1,3 +1,5 @@
+package ColorInheritanceDemo;
+
 /****************************************************/
 /* This class inherits all the public methods from	*/
 /* it's parent class, SimpleColor. This class will	*/

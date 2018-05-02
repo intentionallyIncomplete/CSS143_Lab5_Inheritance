@@ -1,3 +1,5 @@
+package ColorInheritanceDemo;
+
 public class SimpleColor {
 
 	//class variables that represent r=red, g=green, and b=blue

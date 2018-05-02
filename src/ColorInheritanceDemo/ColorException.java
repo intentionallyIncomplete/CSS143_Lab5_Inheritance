@@ -1,3 +1,4 @@
+package ColorInheritanceDemo;
 
 public class ColorException extends RuntimeException {
 	
