@@ -36,14 +36,14 @@ class PolyDemo extends JFrame {
 		Shape[] myShapes= new Shape[20];
 		
 		public PolyDemoPanel() {
-			//Shape a = new Shape( getRandInt(), getRandInt());
-			//Shape b = new Circle( getRandInt(), getRandInt(), getRandInt() );
+			Shape a = new Shape( getRandInt(), getRandInt());
+			Shape b = new Circle( getRandInt(), getRandInt(), getRandInt() );
 		
-			//a = new Square(getRandInt(), getRandInt(), getRandInt(), getRandInt() );
+			a = new Square(getRandInt(), getRandInt(), getRandInt());
 		
 			//a = getRandShape();
 
-			//( (Circle) b ).getRadius();
+			( (Circle) b ).getR();
 		
 		
 			/*********************************************************************************************************************
@@ -64,12 +64,9 @@ class PolyDemo extends JFrame {
 			 * Late Binding Demo
 			 ************************/
 			for( int i = 0; i < myShapes.length; i++ ){
-				//which draw method is invoked here? There are many forms of the method (polymorphic), so which is chosen?
-				//Java has RTTI about every object, and it uses this info to choose the correct method to invoke!
 				myShapes[i].draw( g );	
 			}	
 		}
-			
 		
 		public int getRandInt() {
 			return ( (int) ( Math.random() * 200 ) );	
@@ -79,20 +76,21 @@ class PolyDemo extends JFrame {
 			Shape retVal = null;
 			final int x = getRandInt();
 			final int y = getRandInt();
-			
+			final int r = getRandInt();
+			final int l = getRandInt();
 			
 			/********************************
 			 * Polymorphic extensibility demo
 			 *
 			 *******************************/
 			switch( ( int )(Math.random() * 4) ) {
-				case 0: 	retVal = new Spray( x,y );//new Square( x, y, getRandInt(), getRandInt() );
+				case 0: 	retVal = new Square( x, y, getRandInt());
 							break;
-				case 1: 	retVal = new Spray( x,y );//Cube( x, y, getRandInt(), getRandInt(), getRandInt() );
+				case 1: 	retVal = new Square( x,y,l);//Cube( x, y, getRandInt(), getRandInt(), getRandInt() );
 							break;
-				case 2: 	retVal = new Spray( x,y );
+				case 2: 	retVal = new Spray(x,y);
 							break;
-				case 3: 	retVal = new Spray( x,y );//new Circle( x,y,getRandInt() );////new Cylinder( x,y, getRandInt(), getRandInt() );
+				case 3: 	retVal = new Circle( x,y,r);//new Circle( x,y,getRandInt() );////new Cylinder( x,y, getRandInt(), getRandInt() );
 							break;				
 			}
 		
