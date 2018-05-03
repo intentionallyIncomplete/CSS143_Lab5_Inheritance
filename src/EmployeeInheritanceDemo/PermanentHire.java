@@ -12,6 +12,7 @@ public class PermanentHire extends SalariedWorker{
 	//class variables here
 	public static final double PERM_HIRE_MONTHLY = 10000; //makes 10k monthly for permanent hires.
 	private int monthlyBonus;
+	private int monthlyPay;
 
 	/****************************************************/
 	/* ctor's here. These are similar to the Accountant */
@@ -34,9 +35,11 @@ public class PermanentHire extends SalariedWorker{
 
 	public PermanentHire(String name, int social, int monthlyPay, int monthlyBonus){
 		super(name, social, monthlyPay);
+		this.monthlyPay = monthlyPay;
+		this.monthlyBonus = monthlyBonus;
 	}
 
-	public double calculateWeeklyPay(double monthlyBonus){
+	public double calculateWeeklyPay(){
 		return (monthlyPay/4) + (monthlyBonus/4);
 	}
 }

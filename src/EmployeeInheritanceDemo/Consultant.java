@@ -2,8 +2,8 @@ package EmployeeInheritanceDemo;
 //inherits the methods from HourlyWorker
 public class Consultant extends HourlyWorker {
 
-	//class variables needed?
-
+	//class variables
+	private double hoursWorked;
 
 	/****************************************************/
 	/* Ctor's here. 									*/
@@ -28,5 +28,14 @@ public class Consultant extends HourlyWorker {
 	
 	public Consultant(String name, int social, int hourlyPay){
 		super(name, social, hourlyPay);
+	}
+
+	public Consultant(String name, int social, int hourlyPay, double hoursWorked){
+		super(name, social, hourlyPay);
+		this.hoursWorked = calculateWeeklyPay(hoursWorked);
+	} 
+	
+	public double calculateWeeklyPay(double hoursWorked){
+		return hoursWorked * 3;
 	}
 }

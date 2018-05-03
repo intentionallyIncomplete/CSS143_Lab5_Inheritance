@@ -26,10 +26,10 @@ public class EmployeeDriver {
 		
 		PermanentHire emp6 = new PermanentHire("Shaw", 12838472); //uses two arg ctor of PermanentHire class
 		PermanentHire emp7 = new PermanentHire("Harold", 1244124112, 25000); //uses three arg ctor of PermanentHire class
-		//PermanentHire emp11 = new PermanentHire("Finch", 1244124112, 25000, 1000);
+		PermanentHire emp11 = new PermanentHire("Finch", 1244124112, 25000, 1000);
 		
-		//Consultant emp8 = new Consultant("Reese", 12123123);
-		//Consultant emp9 = new Consultant("Root", 0110012313, 25000);
+		Consultant emp8 = new Consultant("Reese", 12123123);
+		Consultant emp9 = new Consultant("Root", 0110012313, 1000, 20);
 		
 		
 		//and build a set of workers, all of which are employees
@@ -43,9 +43,9 @@ public class EmployeeDriver {
 		//todo: add a sixth and seventh employee to this list that you create
 		myEmployees.add(emp6);
 		myEmployees.add(emp7);
-		//myEmployees.add(emp8);
-		//myEmployees.add(emp9);
-		//myEmployees.add(emp11);
+		myEmployees.add(emp8);
+		myEmployees.add(emp9);
+		myEmployees.add(emp11);
 		
 		//this code doesn't need to change, even if you add 10 new employee classes and 
 		//add 102 new employees - this is an example of generic code that can be written 
