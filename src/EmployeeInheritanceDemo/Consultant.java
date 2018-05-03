@@ -1,5 +1,19 @@
 package EmployeeInheritanceDemo;
-//inherits the methods from HourlyWorker
+
+/****************************************************/
+/* Questions from the Lab answered here				*/
+/* 1) Any method that is left with an access modifier*/ 
+/* of public will be polymorphic(?) to the Employee	*/
+/* Hierarchy. That is, that while the access modifier*/
+/* is public or left default (which is public)		*/
+/* any subclass or derived class may access it.		*/
+/* 2) the getRandInt() method could be implemented	*/
+/* here if the employees salary was random or if we	*/
+/* had a hiring spree and needed to assign people an*/
+/* ID and wanted random numbers to get their new ID	*/
+/* 3) */
+/****************************************************/
+
 public class Consultant extends HourlyWorker {
 
 	//class variables
